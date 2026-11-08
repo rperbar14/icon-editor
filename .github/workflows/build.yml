@@ -25,6 +25,8 @@ jobs:
           unzip icon-editor.zip
           cp -r icon-editor/. .
           rm -rf icon-editor icon-editor.zip
+sed -i 's/setPlayerGlowColor/setPlayerColor3/' src/IconEditorPopup.cpp
+          
 
       - name: Build the mod
         uses: geode-sdk/build-geode-mod@main
